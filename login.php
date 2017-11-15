@@ -1,3 +1,4 @@
+
 <?php
 session_start();   //starts or resumes a session
 
@@ -45,20 +46,29 @@ function loginProcess() {
 <!DOCTYPE html>
 <html>
     <head>
-        <title> Admin Login  </title>
+       <link href="css/styles.css" rel= "stylesheet" type="text/css">
     </head>
     <body>
-
-            <h1> Admin Login </h1>
+     <h1 align="center"><img src="img/keyboard.jpeg" alt="picture of keyboard"/></h1>
+            <h2> Computer Solutions </h2>
             
             <form method="post">
                 
-                Username: <input type="text" name="username"/> <br />
-                
-                Password: <input type="password" name="password" /> <br />
-                
-                <input type="submit" name="loginForm" value="Login!"/>
-                
+               
+
+<fieldset>
+<legend>
+    Log In:
+ </legend>
+<label for="username"></label>  Username:<br>
+<input type="text" name="username" id="username"><br><br>
+
+
+<label for="password"></label>Password:<br>
+<input type="password" name="password" id="password"><br><br>
+
+</fieldset>
+<br>
             </form>
 
             <br />

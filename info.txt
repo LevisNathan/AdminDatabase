@@ -17,6 +17,15 @@ info for phpMyAdmin
 userName: root ;
 passWord: MYSECRET ;
 
+REQUIREMENTS STILL NEEDED:
+2) Users can filter data using at least three fields (10 points)
+5) Users can add items to shopping cart using a Session (10 points)
+
+    create an array to store the product IDs and then display the info based on the ID matching
+
+6) Users can see the content of the shopping cart (10 points)
+7) The web pages have a nice and consistent look and feel (10 points)
+
 
 hey guys i was creating the tables and thought that due to how we have to be
 able to make shopping charts it would be a good idea to make an order table. 

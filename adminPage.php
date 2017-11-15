@@ -47,12 +47,7 @@ function userList(){
                  
                  
                  echo $user['firstName'] . " " . $user['lastName'] . "<br />";
-                 
-                 
              }
-             
-             
-             
              ?>
             
     </body>
