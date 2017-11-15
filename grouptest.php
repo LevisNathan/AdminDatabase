@@ -54,15 +54,22 @@ $servername = "localhost";
     echo "<form>";
     
     //checks for computer or part
-    echo "<br>" ."<select name='category'>";
+    ?>
+    <html>
+        <br>
+        <select name ='category' required>
+    </html>
+    
+    <?php
+   // echo "<br>" ."<select name='category'>";
     echo "<option value=" .'"' ."products" .'"' .">" ."---Category---" ."</option>";
     echo "<option value=" .'"' ."comps" .'"' .">" ."Computer" ."</option>";
     echo "<option value=" .'"' ."products" .'"' .">" ."Parts" ."</option>";
     
     echo "</select>";
     
-    echo "<select name='model'>";
-    echo "<option value=" .'"' ."is NOT NULL" .'"' .">" ."---Maker---" ."</option>";
+    echo "<select required name='model'>";
+    echo "<option value=" .'"' ."" .'"' .">" ."---Maker---" ."</option>";
 
     //fills the selections for the model
     echo "<option value=" .'"'  ."GTX"  .'"' .">" ."GTX" ."</option>";
@@ -85,8 +92,8 @@ $servername = "localhost";
     //used for the type: GPU, CPU
     $sql = "SELECT DISTINCT modelType FROM `products` WHERE 1";
     
-    echo "<select name='type'>";
-    echo "<option value=" .'"' ."is NOT NULL" .'"' .">" ."---type---" ."</option>";
+    echo "<select required name='type'>";
+    echo "<option value=" .'"' ."" .'"' .">" ."---type---" ."</option>";
 
     //fills the selections for the model
     echo "<option value=" .'"'  ."GPU"  .'"' .">" ."GPU" ."</option>";
@@ -214,7 +221,7 @@ $product = dataList2();
               echo"<th>Name</th>";
               echo"<th>Type</th>";
               echo"<th>Price</th>";
-              echo"<th>More</th>";
+              //echo"<th>More</th>";
              foreach($product as $data) {
                 
                 
@@ -222,7 +229,7 @@ $product = dataList2();
                  
                  echo "<td> Maker: ".$data['model']."</td>" . "<td> Name: " .$data['modelName'] ."</td>". "<td> Type: ". $data['modelType'] ."</td>". "<td> Price: " . $data['price'] ." </td>";
                  
-                 echo "<td>[<a href='moreinfo.php?productID=".$data['productID']."'> More Info </a>]</td>";
+                 //echo "<td>[<a href='moreinfo.php?productID=".$data['productID']."'> More Info </a>]</td>";
                   //echo "[<a onclick='return confirmDelete()' href='deleteUser.php?userId=".$user['id']."'> Delete </a>] <br />";
                  echo "</tr>";
                  
